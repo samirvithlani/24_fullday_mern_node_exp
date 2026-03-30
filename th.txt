@@ -1,0 +1,23 @@
+npm i express mongoose
+
+create file app.js
+folder structure:
+src
+ controllers
+ models
+ routes
+ utils
+ middleware
+
+
+ expense:
+ user login ---> exist--> not exist
+ user regisert -->
+ 
+ firstname
+ lastname
+ email
+ password
+ profilpic
+ age
+ gender
