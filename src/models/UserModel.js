@@ -25,6 +25,11 @@ const userSchema = new Schema({
     },
     profilePic:{
         type:String
+    },
+    status:{
+        type:String,
+        enum:["Active","Not Active"],
+        default:"Active"
     }
-})
+},{timestamps:true})
 module.exports =mongoose.model("users",userSchema)

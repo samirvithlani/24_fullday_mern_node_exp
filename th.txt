@@ -21,3 +21,7 @@ src
  profilpic
  age
  gender
+
+
+ npm i bcrypt
+ npm i nodemailer
