@@ -5,6 +5,10 @@ const userRoutes = require("./src/routes/UserRoutes")
 app.use("/user",userRoutes)
 
 
+const expCategoryRoutes = require("./src/routes/ExpCategoryRoutes")
+app.use("/expCat",expCategoryRoutes)
+
+
 //DBCONNECTION:
 const DBConnection = require("./src/utils/DBConnection")
 DBConnection()
