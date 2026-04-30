@@ -25,7 +25,7 @@ const createExpense = async(req,res)=>{
 const getExpesneByUserId = async(req,res)=>{
 
     const userId = req.user._id;
-    const expenses = await expenseSchema.find({userId:userId})
+    const expenses = await expenseSchema.find({userId:userId}).populate("expCat")
     res.status(200).json({
         message:"expense",
         data:expenses

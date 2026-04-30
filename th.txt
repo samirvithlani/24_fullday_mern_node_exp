@@ -30,3 +30,10 @@ src
  login : -->token -->
  middelware : --> token decoded user
  expcatModel :=? createExpCategory controller routes
+
+
+ form : normal data:  ||  normal data + file
+
+
+api --> normal data  --> no file..
+api2 --> images --> update... -->[ backend redis ]
