@@ -35,6 +35,11 @@ const getExpesneByUserId = async(req,res)=>{
 const searchExp = async(req,res)=>{
     const userId = req.user._id;
     const expName = req.query.expName || "";
+    var expamount = req.query.expamount || "";
+    if(expamount){
+        expamount = parseInt(expamount);
+    }
+
     
     try{
         const foundexp = await expenseSchema.find({
