@@ -31,7 +31,33 @@ const getExpesneByUserId = async(req,res)=>{
         data:expenses
     })
 }
+
+const searchExp = async(req,res)=>{
+    const userId = req.user._id;
+    const expName = req.query.expName || "";
+    
+    try{
+        const foundexp = await expenseSchema.find({
+            userId: userId,
+            $or:[
+                { title: { $regex: expName, $options: 'i' } },
+                 { description: { $regex: expName, $options: 'i' } },
+            ]
+        }).populate("expCat")
+
+        res.json({
+            message: "search successful",
+            data: foundexp
+        })  
+    } catch(err) {
+        console.log(err)
+        res.status(500).json({ message: "error while searching expense" })
+    }
+}
+
+
 module.exports={
     createExpense,
-    getExpesneByUserId
+    getExpesneByUserId,
+    searchExp
 }
