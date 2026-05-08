@@ -37,3 +37,6 @@ src
 
 api --> normal data  --> no file..
 api2 --> images --> update... -->[ backend redis ]
+
+
+submit --> expense create-->response -->eid -->update api to upload 
