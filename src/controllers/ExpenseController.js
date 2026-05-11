@@ -84,6 +84,13 @@ const uploadReceipt = async(req,res)=>{
 
 }
 
+const deleteExpense = async(req,res)=>{
+    //karo jate.
+}
+
+
+
+
 module.exports={
     createExpense,
     getExpesneByUserId,
