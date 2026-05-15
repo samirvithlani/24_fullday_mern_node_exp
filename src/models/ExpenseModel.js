@@ -8,6 +8,7 @@ const expenseSchema = new Schema({
     description:{
         type:String
     },
+    //for expense we use amount variable
     amount:{
         type:Number
     },
@@ -30,6 +31,7 @@ const expenseSchema = new Schema({
         type:String,
         enum:["UPI","CASH","CARD","CHEQUE","EMI"]
     },
+    //for income we use income variable
     income:{
         type:Number
     },
